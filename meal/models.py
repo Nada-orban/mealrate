@@ -8,9 +8,28 @@ from django.core.validators import MaxValueValidator,MinValueValidator
 
 
 
+
 class Meals(models.Model):
     title=models.CharField(max_length=32)
     body=models.TextField(max_length=300)
+
+    def no_of_ratings(self):
+        ratings=Rating.objects.filter(meal=self)
+        return len(ratings)#len( to make it number)
+    
+    
+    def avg_rating(self):
+        sum=0
+        ratings=Rating.objects.filter(meal=self)
+        
+        for x in ratings:
+            sum += x.stars
+            
+            
+        if len(ratings)>0:
+            return len(ratings)
+        else:
+            return 0
     
     def __str__(self):
         return self.title
