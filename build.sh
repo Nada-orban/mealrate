@@ -1,5 +1,5 @@
 
 
-pip install -r bulid.sh
+pip install -r requirements.txt
 
 python manage.py migrate
