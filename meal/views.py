@@ -101,8 +101,8 @@ class Rateviewset(viewsets.ModelViewSet):
     serializer_class=Rateserializers
     
     #no any one can make rated only authoticated people
-    authentication_classes=(TokenAuthentication,)
-    permission_classes=(IsAuthenticated,)
+    # authentication_classes=(TokenAuthentication,)
+    # permission_classes=(IsAuthenticated,)
     
     #كده انا امنت ال update وcreate
     def update(self,request,*args, **kwargs):
