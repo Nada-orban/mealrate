@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+# from dj_database_url import parse as dburl
 # import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -51,9 +52,9 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK={
-    # 'DEFAULT_AUTHENTICATION_CLASSES':[
-    #     'rest_framework.authentication.TokenAuthentication'
-    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication'
+    ],
     'DEFAULT_PERMISSION_CLASSES':[
         'rest_framework.permissions.IsAuthenticated'
         
@@ -115,6 +116,11 @@ WSGI_APPLICATION = 'mealrater.wsgi.application'
 #     ),
 # }
 
+#in arabic video
+# default_dburl='sqlite:////'+ os.path.join(BASE_DIR,'db.sqlite3')
+# DATABASES = {
+#     'default': config('DATABASE_URL',default=default_dburl,cast=dburl),
+# }
 
 DATABASES = {
     'default': {
