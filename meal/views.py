@@ -15,8 +15,8 @@ class Userviewset(viewsets.ModelViewSet):
     queryset=User.objects.all()
     serializer_class=Userserializers
     #no any one can make rated only authoticated people
-    authentication_classes=(TokenAuthentication,)
-    permission_classes=(IsAuthenticated,)
+    # authentication_classes=(TokenAuthentication,)
+    # permission_classes=(IsAuthenticated,)
 
 
 
@@ -25,8 +25,8 @@ class Mealviewset(viewsets.ModelViewSet):
     queryset=Meals.objects.all()
     serializer_class=Mealserializers
     #no any one can make rated only authoticated people
-    authentication_classes=(TokenAuthentication,)
-    permission_classes=(IsAuthenticated,)
+    # authentication_classes=(TokenAuthentication,)
+    # permission_classes=(IsAuthenticated,)
     
     
     
